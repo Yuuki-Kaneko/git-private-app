@@ -1,0 +1,15 @@
+<div class ="contents row">
+  <div class ="text">
+   <p> <%= simple_format(@pri.text) %> </p>
+        <ul class="more_list">
+         <% if user_signed_in? && current_user.id == @pri.user_id %>
+          <li>
+            <%= link_to 'EDIT', "/pris/#{@pri.id}/edit", class: 'post', method: :get %>
+          </li>
+          <li>
+            <%= link_to 'DESTROY', "/pris/#{@pri.id}", class: 'post', method: :delete, data: { confirm: '削除しますか？' } %>
+          </li>
+         <% end %>
+        </ul>
+  </div>
+</div>

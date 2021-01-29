@@ -1,0 +1,105 @@
+html {
+    font-family: "yuGothic", sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+  height: 50px;
+  background-color: #20B2AA;
+  display: flex;
+}
+
+.header-main {
+    width: 70%;
+    padding-left: 20px;           /*左の余白を作ってる */
+    font-size: 30px;
+}
+
+.header-main .header-name {
+    color: white;
+    text-decoration: none;
+}
+
+.header-sub {
+    width: 30%;
+}
+
+.header-sub ul {
+  display: flex;										
+  justify-content: center;			/* 中央よせ */
+}
+.header-sub li {
+    list-style: none;	
+    border-radius: 5px;
+    margin: 0 30px;
+    line-height: 50px			
+}
+
+.header-sub .post {
+    color: white;
+}
+
+.text {
+    border: 2px solid #fff;	
+    font-size: 20px;
+    box-shadow: 0 1px 2px gray;
+    padding: 40px 100px;
+    background-color: #FFFFFF;
+    margin: 40px 300px;
+    border-radius: 5px;
+    overflow: hidden;	
+}
+
+.more_list {
+  display: flex;
+  justify-content: center;								
+}
+
+.more_list li {
+    background-color: #20B2AA;
+    font-size: 15px;
+    color: white;
+    list-style: none;
+    border-radius: 3px;
+    margin: 20px 30px 5px;
+    line-height: 30px
+}
+
+.more_list .post {
+    color: white;
+    text-decoration: none;	
+    margin: 0 30px;
+    padding: 10px 10px;
+}
+
+.new-text {
+    margin: 30px 10px;
+}
+
+.new-text .block1 {
+    color: gray;
+    margin-left: 370px;
+}
+
+.new-text .textarea {
+    display: block;
+    border-bottom: solid 1px #20B2AA;
+    padding: 5px 5px;
+    margin: 0 auto ;            /* leftとright*/
+}
+
+.textarea:focus {
+    outline:none;
+}
+
+.new-text .bottun {
+    background-color: #20B2AA;
+    color: white;
+    display: block;
+    margin: 20px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    margin-left: 25% ;
+    margin-right: 75% ;
+    line-height: 30px
+}

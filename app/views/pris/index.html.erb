@@ -1,0 +1,21 @@
+<div class ="contents-row">
+ <% @pris.each do |pri| %>
+  <div class ="text">
+   <p> <%= simple_format(pri.text) %> </p>
+        <ul class="more_list">
+         <li>
+          <%= link_to 'SHOW', "/pris/#{pri.id}", class: 'post', method: :get %>
+         </li>
+          <% if user_signed_in? && current_user.id == pri.user_id %>
+          <li>
+            <%= link_to 'EDIT', "/pris/#{pri.id}/edit", class: 'post', method: :get %>
+          </li>
+          <li>
+            <%= link_to 'DESTROY', "/pris/#{pri.id}", class: 'post', method: :delete %>
+          </li>
+          <% end %>
+        </ul>
+  </div>
+  
+ <% end %>
+</div>

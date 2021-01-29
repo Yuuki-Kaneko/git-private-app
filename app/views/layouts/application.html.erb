@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Private</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">   
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <header class="header">
+        <div class="header-main">
+           <div><a href="/" class ="header-name">Private</a></div>
+        </div>
+        <% if user_signed_in? %>
+        <div class="header-sub">
+          <ul>
+          <li><%= link_to "ログアウト", destroy_user_session_path, class: 'post', method: :delete %></li>
+          <li><a class="post" href="/pris/new">投稿する</a></li>
+          </ul>
+        </div>
+        <% else %>
+        <div class="header-sub">
+          <ul>
+          <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+          </ul>
+        </div>
+        <% end %>
+    </header>
+    
+    <%= yield %>
+    
+  </body>
+</html>

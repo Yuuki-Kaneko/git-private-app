@@ -1,0 +1,2 @@
+class Pri < ApplicationRecord
+end
